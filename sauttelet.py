@@ -8,7 +8,7 @@ Created on Sat Aug 31 14:04:37 2024
 from PIL import Image
 import requests
 import streamlit as st
-from streamlit_lottie as st_lottie
+from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", layout="wide")
 
