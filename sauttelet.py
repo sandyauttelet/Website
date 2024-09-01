@@ -8,15 +8,15 @@ Created on Sat Aug 31 14:04:37 2024
 from PIL import Image
 import requests
 import streamlit as st
-#from streamlit_lottie import st_lottie
+import streamlit_lottie as stl
 
 st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", layout="wide")
 
-#def load_lottieurl(url):
-#    r = requests.get(url)
-#    if r.status_code != 200:
-#        return None
-#    return r.json()
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 #---Use local CSS---
 def local_css(file_name):
@@ -26,7 +26,7 @@ def local_css(file_name):
 local_css("style/style.css")
 
 #---Assets---
-#lottie_geometry = load_lottieurl("https://lottie.host/f06e07de-6fa1-46fe-8fdf-cb2ccd113962/7pjmEm0T2j.json")
+lottie_geometry = load_lottieurl("https://lottie.host/f06e07de-6fa1-46fe-8fdf-cb2ccd113962/7pjmEm0T2j.json")
 img_headshot = Image.open("images/Headshot_sandy.png")
 
 st.subheader("Hi, I am Sandy Auttelet")
@@ -43,7 +43,7 @@ with st.container():
         st.write("##")
     with right_column:
         st.empty()
-        #st_lottie(lottie_geometry, height=300, key="geometry")
+        stl.st_lottie(lottie_geometry, height=300, key="geometry")
         
 #---Projects---
 with st.container():
