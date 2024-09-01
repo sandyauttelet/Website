@@ -31,7 +31,7 @@ img_headshot = Image.open("images/Headshot_sandy.png")
 
 st.subheader("Hi, I am Sandy Auttelet")
 st.title("Bachelor of Science in Physics and Theoretical Mathematics")
-st.write("I am interested in pursuing a PhD in Geometric Theoretical Physics")
+st.write("Me changing information to see if it updates. I am interested in pursuing a PhD in Geometric Theoretical Physics")
 st.write("[Projects Found Here](https://github.com/sandyauttelet)")
 
 #---What I do---
