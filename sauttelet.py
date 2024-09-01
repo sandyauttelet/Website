@@ -63,7 +63,7 @@ with st.container():
     st.header("Get in touch with me!")
     st.write("##")
     contact_form = """
-    <form action="https://formsubmit.co/sandra.zichterman@wsu.edu" method="POST">
+    <form action="https://formsubmit.co/el/zatimi" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
