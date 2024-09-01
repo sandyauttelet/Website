@@ -8,7 +8,7 @@ Created on Sat Aug 31 14:04:37 2024
 from PIL import Image
 import requests
 import streamlit as st
-import streamlit_lottie as stl
+from streamlit_lottie as st_lottie
 
 st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", layout="wide")
 
@@ -43,7 +43,7 @@ with st.container():
         st.write("##")
     with right_column:
         st.empty()
-        stl.st_lottie(lottie_geometry, height=300, key="geometry")
+        st_lottie(lottie_geometry, height=300, key="geometry")
         
 #---Projects---
 with st.container():
