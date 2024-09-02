@@ -7,6 +7,7 @@ Created on Sat Aug 31 14:04:37 2024
 
 from PIL import Image
 import requests
+import base64
 import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
 
