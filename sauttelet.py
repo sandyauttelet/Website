@@ -7,14 +7,16 @@ Created on Sat Aug 31 14:04:37 2024
 
 from PIL import Image
 import requests
-import base64
 import streamlit as st
-from streamlit_pdf_viewer import pdf_viewer
 
 st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", layout="wide")
 
 #---Assets---
 img_headshot = Image.open("images/Headshot_sandy.png")
+cv1 = Image.open("images/cv1.png")
+cv2 = Image.open("images/cv2.png")
+cv3 = Image.open("images/cv3.png")
+cv4 = Image.open("images/cv4.png")
 
 #---Use local CSS---
 def local_css(file_name):
@@ -37,10 +39,10 @@ def main_page():
 def page2():
     st.markdown("# CV")
     st.sidebar.markdown("# CV")
-    with open("pdfs/CV.pdf, "r") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = F'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>’
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    st.image(cv1)
+    st.image(cv2)
+    st.image(cv3)
+    st.image(cv4)
 
 #---Research Page---
 def page3():
