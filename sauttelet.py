@@ -70,7 +70,7 @@ def page4():
         st.write("##")
     image_column, text_column = st.columns((1,2))
     with image_column:
-        st.epmty()
+        st.empty()
     with text_column:
         st.write("Write some information about each project")
         st.markdown("[Project report and code](https://github.com/sandyauttelet)")
