@@ -15,11 +15,11 @@ st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", l
 img_headshot = Image.open("images/Headshot_sandy.png")
 
 #---Use local CSS---
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-local_css("style/style.css")
+#def local_css(file_name):
+#    with open(file_name) as f:
+#        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+#
+#local_css("style/style.css")
 
 def main_page():
     st.markdown("# Home")
@@ -89,5 +89,5 @@ page_names_to_funcs = {
     "Contact": page5,
 }
 
-selected_page = st.sidebar("Select a page", page_names_to_funcs.keys())
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
 page_names_to_funcs[selected_page]()
