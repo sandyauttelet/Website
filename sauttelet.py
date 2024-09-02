@@ -49,7 +49,7 @@ def page3():
         st.empty()
 
 #---Projects Page---
-    def page4():
+def page4():
     st.markdown("# Projects")
     st.sidebar.markdown("# Projects")
     with st.container():
