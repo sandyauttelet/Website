@@ -13,7 +13,7 @@ input[type=message], input[type=email], input[type=text], textarea {
 
 /* Style the submit button with a specific background color etc */
 button[type=submit] {
-  background-color: #FF9999;
+  background-color: #FFCCE6;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -23,7 +23,7 @@ button[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
-  background-color: #FFCCE6;
+  background-color: #FF80AA;
 }
 
 
