@@ -37,7 +37,7 @@ def page3():
     st.markdown("# Research")
     st.sidebar.markdown("# Research 2")
     with st.container():
-    st.write("---")
+        st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
         st.header("What I do")
@@ -49,9 +49,9 @@ def page4():
     st.markdown("# Projects")
     st.sidebar.markdown("# Projects")
     with st.container():
-    st.write("---")
-    st.header("My Projects")
-    st.write("##")
+        st.write("---")
+        st.header("My Projects")
+        st.write("##")
     image_column, text_column = st.columns((1,2))
     with image_column:
         st.image(img_headshot)
@@ -63,9 +63,9 @@ def page5():
     st.markdown("# Contact Me")
     st.sidebar.markdown("# Contact Me")
     with st.container():
-    st.write("---")
-    st.header("Get in touch with me!")
-    st.write("##")
+        st.write("---")
+        st.header("Get in touch with me!")
+        st.write("##")
     contact_form = """
     <form action="https://formsubmit.co/sandyauttelet1@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
