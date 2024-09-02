@@ -23,7 +23,7 @@ button[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 button[type=submit]:hover {
-  background-color: #FF6666;
+  background-color: #FFCCE6;
 }
 
 
