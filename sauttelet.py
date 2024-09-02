@@ -30,10 +30,13 @@ def main_page():
     st.markdown("# Home")
     st.sidebar.markdown("# Home")
     st.subheader("Hi, I am Sandy Auttelet")
-    st.image(img_headshot)
-    st.title("Bachelor of Science in Physics and Theoretical Mathematics")
-    st.write("Me changing information to see if it updates. I am interested in pursuing a PhD in Geometric Theoretical Physics")
-    st.write("[Projects Found Here](https://github.com/sandyauttelet)")
+    image_column, text_column = st.columns((1,2))
+    with image_column:
+        st.image(img_headshot)
+    with text_column:
+        st.title("Bachelor of Science in Physics and Theoretical Mathematics")
+        st.write("I am interested in pursuing a PhD in Geometric Theoretical Physics")
+    
 
 #---CV Page---
 def page2():
@@ -67,7 +70,7 @@ def page4():
         st.write("##")
     image_column, text_column = st.columns((1,2))
     with image_column:
-        at.epmty()
+        st.epmty()
     with text_column:
         st.write("Write some information about each project")
         st.markdown("[Project report and code](https://github.com/sandyauttelet)")
