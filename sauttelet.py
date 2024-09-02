@@ -11,23 +11,32 @@ import streamlit as st
 
 st.set_page_config(page_title="sauttelet", page_icon=":globe_with_meridians:", layout="wide")
 
+#---Assets---
+img_headshot = Image.open("images/Headshot_sandy.png")
+
 #---Use local CSS---
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-        
+
 local_css("style/style.css")
 
-#---Assets---
-img_headshot = Image.open("images/Headshot_sandy.png")
+def main_page():
+    st.markdown("# Home")
+    st.sidebar.markdown("# Home")
+    st.subheader("Hi, I am Sandy Auttelet")
+    st.title("Bachelor of Science in Physics and Theoretical Mathematics")
+    st.write("Me changing information to see if it updates. I am interested in pursuing a PhD in Geometric Theoretical Physics")
+    st.write("[Projects Found Here](https://github.com/sandyauttelet)")
 
-st.subheader("Hi, I am Sandy Auttelet")
-st.title("Bachelor of Science in Physics and Theoretical Mathematics")
-st.write("Me changing information to see if it updates. I am interested in pursuing a PhD in Geometric Theoretical Physics")
-st.write("[Projects Found Here](https://github.com/sandyauttelet)")
+def page2():
+    st.markdown("# CV")
+    st.sidebar.markdown("# CV")
 
-#---What I do---
-with st.container():
+def page3():
+    st.markdown("# Research")
+    st.sidebar.markdown("# Research 2")
+    with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
@@ -35,9 +44,11 @@ with st.container():
         st.write("##")
     with right_column:
         st.empty()
-        
-#---Projects---
-with st.container():
+
+def page4():
+    st.markdown("# Projects")
+    st.sidebar.markdown("# Projects")
+    with st.container():
     st.write("---")
     st.header("My Projects")
     st.write("##")
@@ -47,9 +58,11 @@ with st.container():
     with text_column:
         st.write("Write some information about each project")
         st.markdown("[Project report and code](https://github.com/sandyauttelet)")
-        
-#---Contact form---
-with st.container():
+
+def page5():
+    st.markdown("# Contact Me")
+    st.sidebar.markdown("# Contact Me")
+    with st.container():
     st.write("---")
     st.header("Get in touch with me!")
     st.write("##")
@@ -67,3 +80,14 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.empty()
+
+page_names_to_funcs = {
+    "Main Page": main_page,
+    "Page 2": page2,
+    "Page 3": page3,
+    "Page 4": page4,
+    "Page 5": page5,
+}
+
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
