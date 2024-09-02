@@ -57,7 +57,7 @@ def page3():
     left_column, right_column = st.columns(2)
     with left_column:
         st.write("##")
-        t.image(min_cut)
+        st.image(min_cut)
     with right_column:
         st.write("Flat norm text")
 
