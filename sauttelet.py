@@ -17,6 +17,7 @@ cv1 = Image.open("images/cv1.png")
 cv2 = Image.open("images/cv2.png")
 cv3 = Image.open("images/cv3.png")
 cv4 = Image.open("images/cv4.png")
+min_cut = Image.open("images/2D_min_cut.png")
 
 #---Use local CSS---
 def local_css(file_name):
@@ -49,16 +50,16 @@ def page2():
 
 #---Research Page---
 def page3():
-    st.markdown("# Research")
-    st.sidebar.markdown("# Research 2")
+    st.markdown("# My Current Research Interests")
+    st.sidebar.markdown("# Research")
     with st.container():
         st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header("What I do")
         st.write("##")
+        t.image(min_cut)
     with right_column:
-        st.empty()
+        st.write("Flat norm text")
 
 #---Projects Page---
 def page4():
